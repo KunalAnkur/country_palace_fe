@@ -16,7 +16,7 @@ body {
 
 /*here is home page styles*/
 
-.homePage {
+/* .homePage {
   padding: 0;
   margin: 0;
   display: flex;
@@ -26,7 +26,7 @@ body {
   height: 77vh;
   width: 100%;
   text-align: center;
-}
+} */
 
 
 .cards {
@@ -34,14 +34,14 @@ body {
   margin: 50px 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   max-width: 1300px;
 }
 
 /*here is cardComponent styles*/
 
-.cardFlag {
+/* .cardFlag {
   width: 250px;
   height: 50%;
 }
@@ -68,7 +68,7 @@ body {
 .cardComponent:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* button {
 button {
@@ -92,18 +92,6 @@ button:hover {
   border-color: azure;
 } */
 
-footer {
-  background-color: azure;
-  text-align: center;
-
-  padding: 15px 0;
-  margin-top: 20px;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: #2978b5;
-}
 
 /*here is create page styles*/
 

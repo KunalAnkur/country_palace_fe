@@ -57,22 +57,21 @@ const Creation = () => {
         {flags.map((flag, id) => (
           <div
             className="box"
+            onClick={() => {
+              handleImg(flag.link);
+            }}
             style={{
               backgroundImage: `url(
                 ${flag.banner}
               )`,
-              backgroundSize: "cover",
+              backgroundSize: "cover", 
+              border: imageLink === flag.link ? "4px solid #49b5bc" : "none",
+              borderRadius: "8px",
             }}
           >
             <img
               key={id}
-              style={{
-                border: imageLink === flag.link ? "1px solid #3498db" : "none",
-                borderRadius: "8px",
-              }}
-              onClick={() => {
-                handleImg(flag.link);
-              }}
+              
               className="flagSvg"
               src={flag.link}
               alt={flag.name}
@@ -95,7 +94,7 @@ const Creation = () => {
 
         <div className="group">
           <h2 className="textareaWrite">Write Your Blog</h2>
-          <hr className="hr" />
+          {/* <hr className="hr" /> */}
         </div>
 
         <div className="textareaButton">

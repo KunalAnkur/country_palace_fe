@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import FormComponent from "../components/FormComponent"
 import "./UserLogin.css";
-const LoginPage = () => {
+const LoginPage = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const Navigate = useNavigate();
@@ -23,10 +23,10 @@ const LoginPage = () => {
       console.log(response.data);
 
       const token = response.data.token;
-
       localStorage.setItem("token", token);
       Navigate("/");
     } catch (error) {
+      setUser({});
       console.error("Login failed:", error.message);
     }
   }
