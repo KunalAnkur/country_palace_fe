@@ -4,7 +4,7 @@ import "./Footer.css"
 const Footer = () => {
   const isLogin = localStorage.getItem("token");
   return (
-    isLogin &&
+    isLogin !== null &&
     <footer>
       Made by Zümra.
     </footer>
