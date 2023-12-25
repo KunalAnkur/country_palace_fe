@@ -1,8 +1,9 @@
 .creationPage {
   padding: 0px;
   margin: 0 auto;
+  margin-top: 150px;
   min-height: 100%;
-  max-width: 1200px;
+  max-width: 1150px;
   display: flex;
   flex-direction: column;
 
@@ -54,13 +55,14 @@
   border: none;
   outline: 0;
   color: #49b5bc;
-  font-size: xx-large;
+  font-size: 50px;
   font-weight: 500;
+  background-color: transparent;
 }
 
 .creationInput::placeholder {
   color: #49b5bc;
-  font-size: xx-large;
+  font-size: 50px;
   font-weight: 600;
 }
 .textareaButton {
@@ -93,8 +95,8 @@
   cursor: pointer;
   border-radius: 40px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 15px;
+  bottom: 15px;
   border: #49b5bc;
   display: flex;
   justify-content: center;
@@ -109,7 +111,7 @@
 
 .textareaWrite {
   color: #49b5bc;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 }
 

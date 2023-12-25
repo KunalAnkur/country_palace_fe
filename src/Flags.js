@@ -20,7 +20,15 @@ import spainBanner from "./assets/beauties/barcelona.jpg";
 import turkeyBanner from "./assets/beauties/turkey.jpg";
 import ukBanner from "./assets/beauties/uk.jpg";
 
-export const flags = [
+
+import avatarOne from "./assets/avatarOne.png"
+import avatarTwo from "./assets/avatarTwo.png"
+import avatarThree from "./assets/avatarThree.png"
+import avatarFour from "./assets/avatarFour.png"
+import avatarFive from "./assets/avatarFive.png"
+import avatarWomen from "./assets/avatarwomen.png"
+
+const flags = [
   {
     link: india,
     banner: indiaBanner,
@@ -72,3 +80,171 @@ export const flags = [
     name: "United Kingdom",
   },
 ];
+
+function getCountryBanner(link) {
+  return flags.find(f => f.link === link).banner;
+}
+
+
+const avatars = [
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+  avatarOne,
+  avatarWomen,
+  avatarTwo,
+  avatarThree,
+  avatarFive,
+  avatarFour,
+]
+
+
+function getAvatarByID(id) {
+  const index = Math.floor((1/id) * avatars.length);
+  console.log(index)
+  return avatars[index];
+}
+
+function getRandomAvatar() {
+  return avatars[Math.floor(Math.random() * avatars.length)];
+}
+
+function sumAsciiFromString(str) {
+  let sum = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    sum += str.charCodeAt(i);
+  }
+
+  return sum;
+}
+
+function getLoginUserAvatar(token) {
+  const index = sumAsciiFromString(token);
+  return getAvatarByID(index);
+}
+
+export { getCountryBanner, flags, getAvatarByID, getRandomAvatar, getLoginUserAvatar }

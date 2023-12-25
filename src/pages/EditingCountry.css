@@ -1,13 +1,3 @@
-.editingPage {
-  width: 1200px;
-  height: 80vh;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px auto;
-  gap: 100px;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-}
 
 .editingTextarea {
   width: 80%;
@@ -23,8 +13,16 @@
   line-height: 1.5;
 }
 
+.editingPage .main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.editingPage .right-content {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+}
 .editingSubmit {
-  margin-top: -75px;
   width: 110px;
   height: 50px;
   background-color: #49b5bc;
@@ -32,12 +30,9 @@
   cursor: pointer;
   border-radius: 40px;
   border: 1px solid #49b5bc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .editingSubmit:hover {

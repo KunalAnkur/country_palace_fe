@@ -1,8 +1,7 @@
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import avatarwomen from "../assets/avatarwomen.png";
 import "./CardComponent.css";
-import flag from "../Flags";
+import {getCountryBanner, getAvatarByID} from "../Flags";
 const CardComponent = (props) => {
   const Navigate = useNavigate();
 
@@ -12,13 +11,14 @@ const CardComponent = (props) => {
 
   return (
     <div className="cardComponent" onClick={goToBlog}>
+      <img className="background-image" src={getCountryBanner(props.imageLink)} alt="" />
       <div className="cardTop">
-        <h1 className="cardTitle">discovering {props.title}</h1>
+        <h1 className="cardTitle">{props.title}</h1>
         <img className="cardFlag" src={props.imageLink} alt="flag"></img>
       </div>
 
       <div className="cardBottom">
-        <img src={avatarwomen} alt="avatarwomen" />
+        <img src={(getAvatarByID(props.index))} alt="avatarwomen" />
         <p>{props.createdBy}</p>
       </div>
     </div>

@@ -1,9 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Inria Sans', sans-serif;
 }
 body {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +16,7 @@ body {
 
 /*here is home page styles*/
 
-.homePage {
+/* .homePage {
   padding: 0;
   margin: 0;
   display: flex;
@@ -26,29 +26,51 @@ body {
   height: 77vh;
   width: 100%;
   text-align: center;
-}
+} */
 
-header {
-  background-color: azure;
-  padding: 22px 0;
-  width: 100%;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: #2978b5;
-}
 
 .cards {
   flex-grow: 1;
   margin: 50px 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   max-width: 1300px;
 }
 
+/*here is cardComponent styles*/
+
+/* .cardFlag {
+  width: 250px;
+  height: 50%;
+}
+
+.cardTitle {
+  color: #444444;
+}
+
+.cardComponent {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border: 1px solid azure;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 1px 5px #cdc3c3;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: white;
+}
+
+.cardComponent:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* button {
 button {
   height: 50px;
   margin: 10px;
@@ -68,20 +90,8 @@ button:hover {
   color: #fff;
   background-color: #3498db;
   border-color: azure;
-}
+} */
 
-footer {
-  background-color: azure;
-  text-align: center;
-
-  padding: 15px 0;
-  margin-top: 20px;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: #2978b5;
-}
 
 /*here is create page styles*/
 
@@ -127,7 +137,7 @@ footer {
 }
 
 /*userloginpage*/
-.buttonshome {
+/* .buttonshome {
   display: flex;
   flex-direction: row;
 }
@@ -186,14 +196,14 @@ label {
 .userinput:focus {
   outline: none;
   border: 1px solid #3498db;
-}
+} */
 
 /*account a tags*/
-.account {
+/* .account {
   text-decoration: none;
   color: #444343;
 }
 
 .account:focus {
   color: #3498db;
-}
+} */
