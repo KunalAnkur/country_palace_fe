@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import "./SelectedCountry.css";
 
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import editIcon from "../assets/editIcon.svg";
+import deleteIcon from "../assets/deleteIcon.svg";
+
 const SelectedCountry = () => {
   const Navigate = useNavigate();
   const [data, setData] = useState({});
@@ -52,20 +56,32 @@ const SelectedCountry = () => {
 
   return (
     <div className="selectedCountryPage">
-      <img
+      {/* <img
         className="selectedCountryFlag"
         src={data.imageLink}
         alt="flagofcountry"
-      />
-      <h1 className="selectedCountryName">{data.title}</h1>
+      /> */}
+      {/* <h1 className="selectedCountryName">{data.title}</h1> */}
       <p className="selectedCountryDescription">{data.description}</p>
       <div className="selectedCountryPageButtons">
+        <div className="icons">
+          <div className="iconBackground">
+            {" "}
+            <img className="icon" src={editIcon} onClick={goEditingCountry} />
+          </div>
+          <div className="iconBackground">
+            {" "}
+            <img className="icon" src={deleteIcon} onClick={goHome} />
+          </div>
+        </div>
+
+        {/* 
         <button onClick={goHome} className="selectedCountryButton">
           Delete
-        </button>
-        <button onClick={goEditingCountry} className="selectedCountryButton">
+        </button> */}
+        {/* <button onClick={goEditingCountry} className="selectedCountryButton">
           Edit
-        </button>
+        </button> */}
       </div>
     </div>
   );
