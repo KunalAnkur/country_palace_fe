@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import "./EditingCountry.css";
 
 const EditingCountry = () => {
   const Navigate = useNavigate();
@@ -65,30 +66,30 @@ const EditingCountry = () => {
 
   return (
     <div className="editingPage">
-      <img className="countryFlag" src={imageLink} alt="flagofcountry" />
-      <h1 className="editingPageTitle">EDIT THE INFORMATION</h1>
-      <div className="creationForm">
-        <input
+      {/*  <img className="countryFlag" src={imageLink} alt="flagofcountry" />
+      <h1 className="editingPageTitle">EDIT THE INFORMATION</h1> */}
+      {/*  <div className="creationForm"> */}
+      {/*  <input
           className="creationInput"
           type="text"
           placeholder="Edit the country name."
           onChange={handleInput}
           value={title}
-        />
-        <textarea
-          placeholder="Edit the description."
-          className="creationTextarea"
-          name="textarea"
-          id="textArea"
-          cols="30"
-          rows="10"
-          onChange={handleTextarea}
-          value={description}
-        ></textarea>
-        <button onClick={editingSubmit} className="creationSubmit">
-          Save
-        </button>
-      </div>
+        /> */}
+      <textarea
+        placeholder="Edit the description."
+        className="editingTextarea"
+        name="textarea"
+        id="textArea"
+        cols="30"
+        rows="10"
+        onChange={handleTextarea}
+        value={description}
+      ></textarea>
+      <button onClick={editingSubmit} className="editingSubmit">
+        Save
+      </button>
+      {/* </div> */}
     </div>
   );
 };
